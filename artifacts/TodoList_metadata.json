@@ -4,7 +4,100 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_text",
+						"type": "string"
+					}
+				],
+				"name": "create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "todos",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "toggleCompeted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_text",
+						"type": "string"
+					}
+				],
+				"name": "updateText",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +126,11 @@
 	},
 	"sources": {
 		"contracts/TodoList.sol": {
-			"keccak256": "0xb223bc0605d6571ff2dc0b15cf058cc1991a6eb33aa49a5a63d8ede8756bd42d",
+			"keccak256": "0x888d61283b9ec387770084bed7bbc12c001a22047340129555ef16545cd1cf37",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9e550fbfa9d52e7d9cb7b87a80a0bdf0b3b1314881532e5c5627ad26fdd22a50",
-				"dweb:/ipfs/QmUC2CnDpvPhowSxo6AAuGnLhhZjPq2GhMmQ4gqVd2dPQZ"
+				"bzz-raw://81bf5fb2ce932be8793e9cc3fb7af82bb1ea47889e90162b925328764a704648",
+				"dweb:/ipfs/Qmb46GoZGUuyVLGuqWb6GXCvKZC8qYWm6djEyZZodyhdPp"
 			]
 		}
 	},

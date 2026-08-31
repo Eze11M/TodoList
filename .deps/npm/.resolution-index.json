@@ -2,7 +2,7 @@
   "contracts/TodoList.sol": {
     "__sources__": {
       "contracts/TodoList.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\ncontract TodoList {\r\n    \r\n}",
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\ncontract TodoList {\r\n    struct Todo {\r\n        string text;\r\n        bool completed;\r\n    }\r\n\r\n    Todo[] public todos;\r\n\r\n    function create(string calldata _text) external {\r\n        todos.push(Todo({\r\n            text: _text,\r\n            completed: false\r\n        }));\r\n    }\r\n\r\n    function updateText(uint256 _index, string calldata _text) external {\r\n        Todo storage todo = todos[_index];\r\n        todo.text = _text;\r\n    }\r\n\r\n    function get(uint256 _index) external view returns (string memory, bool) {\r\n        Todo storage todo = todos[_index];\r\n        return (todo.text, todo.completed);\r\n    }\r\n\r\n    function toggleCompeted(uint256 _index) external {\r\n        todos[_index].completed = !todos[_index].completed;\r\n    }\r\n}",
         "file": "contracts/TodoList.sol"
       }
     }
